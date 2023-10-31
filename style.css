@@ -1,0 +1,537 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ************************************ Utility Class ******************************************** */
+
+:root {
+  --primary-color: #4891ff;
+  --light-color: #f4f4f6;
+  --dark-color: #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-sm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* ***********Navbar************* */
+
+.navbar {
+  background: #fff;
+  padding: 20px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .main-menu ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  padding: 10px 20px;
+  display: block;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.navbar ul li:last-child a {
+  margin-left: 10px;
+}
+
+.navbar ul li a i {
+  margin-right: 10px;
+}
+
+.navbar ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* *************Button**************** */
+
+.btn {
+  display: inline-block;
+  background: var(--light-color);
+  padding: 13px 20px;
+  color: var(--dark-color);
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.hero .container .hero-content .hero-buttons .btn:hover {
+  background: black;
+  color: white;
+}
+
+.hero .container .hero-content .hero-buttons .btn {
+  margin-left: 10px;
+}
+
+.hero .container .hero-content .hero-buttons .btn-primary {
+  margin-left: 0px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.btn-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.hero .container .hero-content .hero-buttons .btn i {
+  margin-right: 10px;
+}
+
+/* ************ Text Classes **************** */
+
+.text-xxl {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: bolder;
+  margin: 40px 0 20px;
+  letter-spacing: -0.05rem;
+}
+
+.text-xl {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  letter-spacing: -0.03rem;
+}
+
+.text-lg {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 30px 0 20px;
+  letter-spacing: -0.03rem;
+}
+
+.text-md {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  font-weight: normal;
+  margin: 20px 0 20px;
+  letter-spacing: -0.03rem;
+}
+
+.text-sm {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: normal;
+  margin: 5x 0 10px;
+  letter-spacing: -0.03rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* **********HERO************** */
+
+.hero {
+  margin-bottom: 50px;
+}
+
+.hero .container {
+  background: url(hero-bg.png) no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 550px;
+}
+
+.hero .hero-content {
+  width: 70%;
+}
+
+.hero .hero-text {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+/* *********video********* */
+
+.video {
+  padding: 10px 0 40px;
+}
+
+.video-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-preview {
+  margin-bottom: 20px;
+}
+
+/* ***********background*********** */
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff;
+}
+
+.bg-black {
+  background: #000;
+  color: #fff;
+}
+
+/* ************Testimonials************ */
+.testimonials {
+  padding: 40px 0;
+}
+
+.testimonials .testimonials-heading {
+  width: 700px;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+}
+
+.testimonials .card p:nth-child(2) {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.testimonials .card p:nth-child(3) {
+  margin-top: 0px;
+  font-weight: 500;
+}
+
+/* **********card******** */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.pricing .pricing-card-subheading {
+  margin-bottom: 20px;
+}
+
+.pricing .pricing-card-price {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.pricing ul {
+  margin: 30px 0;
+}
+
+.pricing ul li {
+  margin-bottom: 20px;
+}
+
+.pricing ul li i {
+  margin-right: 10px;
+}
+
+.pricing .pricing-footer {
+  margin: 30px 0;
+}
+
+.faq {
+  padding: 40px 0;
+}
+
+.faq .faq-group {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+
+.faq .faq-group .faq-group-header {
+  padding: 20px 0;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.faq .faq-group .faq-group-header h4 {
+  font-weight: 600;
+  width: 95%;
+}
+
+.faq .faq-group .faq-group-header i {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.faq .faq-group .faq-group-body {
+  display: none;
+}
+
+.faq .faq-group .faq-group-body.open {
+  display: block;
+}
+
+.faq ul.faq-menu {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ddd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq ul.faq-menu li {
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.faq ul.faq-menu li.active {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* **************************Footer***************** */
+
+.footer {
+  padding: 40px 0;
+}
+
+.footer h4 {
+  margin-bottom: 10px;
+}
+
+.footer ul {
+  text-align: left;
+}
+
+.footer ul li {
+  line-height: 2.5;
+}
+
+.footer ul li a {
+  color: #ccc;
+}
+
+.footer i {
+  font-size: 2rem;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-card {
+  margin: 20px 30px 30px 0;
+}
+
+.footer input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.footer .container .footer-grid .card {
+  margin-top: 15px;
+}
+
+.footer .container .footer-grid .card h4 {
+  margin-left: 0;
+}
+
+.footer .container .footer-grid h4 {
+  margin-top: 0;
+  margin-left: 37px;
+}
+
+.footer .container .footer-grid div:last-child {
+  margin-top: -75px;
+}
+
+
+/* ********************* */
+
+div.card.bg-light {
+  transition: 0.5s ease-in-out;
+}
+
+div.card.bg-light:hover {
+    box-shadow: 0px 7px 20px 1px grey;
+    transform: scale(1.05);
+} 
+
+div.card.bg-black {
+  transition: 0.5s ease-in-out;
+}
+
+div.card.bg-black:hover {
+    box-shadow: 0px 7px 20px 1px grey;
+    transform: scale(1.05);
+} 
+
+
